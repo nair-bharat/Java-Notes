@@ -1,0 +1,17 @@
+// Static Method:
+    1. These Methods are associated with the class
+    2. can be used with the class name
+    3. static methods cannot access non-static instance variables and methods
+    4. static methods cannot be overriden
+
+    When to declare static method:
+        1. Methods which do not modify the state of the object can be declared static
+        2. Utility method which do not use any instance variable and compute only on arguments
+
+// Why static methods cannot be overriden ?
+    static is compile time - not runtime
+
+
+    // Main2
+        // Person.java, Doctor.java
+

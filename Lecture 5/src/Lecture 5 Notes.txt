@@ -1,0 +1,66 @@
+Methods - Part 1
+    1. used to perform certain task
+    2. collection of instruction that performs specific task
+    3. bring code readability and re-usability
+
+    how to declare method:
+        public int sum(int a, int b) throws Exception {
+            // method body
+        }
+
+    // Access specifiers:
+
+        1. public: can be accessed through any class in any package
+        2. private: can be accessed by methods only in the same class
+        3. protected: can be accessed by other classes in same package or other subclasses in different package
+        4. default: if we do not specify anything, default access specifier is used by Java. It can be only accessed by classes in same package.
+
+        eg:
+            SalesDepartment package:
+                Analytics class
+                        Invoice invoice = new Invoice();
+                        // invoice.getProfitStatements(); - won't be able to access within same package as well.
+                        invoice.getAdditionalDetails(); // able to access protected method - same package
+                        invoice.getMiscData(); // able to access - Default access specifier
+                Invoice class
+                    methods:
+                        getInvoice (public method)
+                        getProfitStatements (private method)
+                        getAdditionalDetails (protected method and belongs to same package)
+                        getMiscData (default method)
+
+            HumanResourcesDepartment package:
+                EmployeeSalaryDetails class:
+                        Invoice invoice = new Invoice();
+                        invoice.getInvoice(); // we can access this method
+                        // invoice.getProfitStatements() - we won't be able to access this method
+
+
+
+
+    // return type:
+        1. Method do not return anything use void
+        2. Use class name or primitive data types as return type of method
+
+    // Method name:
+        1. It should be verb (some kind of action)
+        2. Should start with small letter and follow camel case in case of multiple words
+
+
+    // Types of Method:
+        1. System defined Method
+            Methods which are already defined and ready to use in Java like Math.sqrt()
+
+        2. User defined Method:
+            Methods which we create
+
+        3. Overloaded Method:
+            More than 1 method with same name in same class (return type not considered)
+                // TaxStatements.java
+
+        4. Overriden Method:
+            SubClass has same method as parent
+                // SocialMedia.java
+                    // Poster.java
+
+

@@ -1,0 +1,53 @@
+Java Basics Overview:
+    1. Java is platform independent programming lang.
+    2. OOps Language
+    Adv:
+        Portability (WORA)
+
+    3 Main Components in Java:
+        JVM - Java Virtual Machine
+            Abstract Machine - Doesn't exist physically
+
+    Java Program (Platform independent) -> Compiler -> Byte Code -> JVM (Because of JVM, we get portability) -> Machine Code -> CPU -> Output
+
+    JVM -> Platform dependent
+
+    MacOS JVM is different and Windows is different
+
+    JVM has JIT Compiler and understands byte code
+
+    Java Program (filename.java) -> passes through compiler -> Byte code (filename.class)
+
+    JRE -> Java Runtime Environment
+    JRE has JVM + class libraries (java.math, java.util)
+
+    With only JRE, we can run any Java program, we can't just have JVM
+
+
+
+
+
+
+1. Main method should be inside public Class
+2. Public Class name should be same as file name in Java
+
+Why 1. ?
+JVM is used to invoke main method, it needs access to the method and it is declared with 'static' keyword because
+JVM can call with class name
+    ANew.main()
+
+    so class is defined as public so that class is available to JVM
+
+Why 2. ?
+
+In a file if there are 100's of classes then how Java can understand which one to invoke, so that is why
+file name should be equal to the public class name
+
+
+eg :
+
+Employee.java
+
+    class Employee {
+
+    }

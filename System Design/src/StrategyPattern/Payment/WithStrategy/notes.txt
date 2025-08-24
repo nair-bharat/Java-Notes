@@ -1,0 +1,78 @@
+🔹 What is the Strategy Pattern?
+
+The Strategy Pattern is a behavioral design pattern that lets you define a family of algorithms, put each of them in a separate class, and make their objects interchangeable at runtime.
+
+👉 Think of it like payment methods in an e-commerce app:
+
+You can pay via Credit Card, UPI, or PayPal.
+
+The Payment Strategy can be swapped without changing the checkout process.
+
+🔹 Structure
+
+    Strategy Interface – defines a common method (e.g., pay()).
+
+    Concrete Strategies – different implementations (CreditCard, PayPal, UPI).
+
+    Context – uses a Strategy object, delegates work to it.
+
+🔹 When to Use Strategy Pattern?
+
+    When you have different ways of doing the same task (different algorithms).
+
+    To avoid lots of if-else/switch statements.
+
+    Example scenarios:
+
+    Sorting with different algorithms (QuickSort, MergeSort, BubbleSort).
+
+    Payment methods.
+
+    Compression (ZIP, RAR, 7Z).
+
+    Navigation apps (Bike route, Car route, Walking route).
+
+
+🔹 Real Java Usage
+
+    Collections.sort() with Comparator → Different comparators are strategies.
+
+    Spring Security → Different authentication strategies (form login, OAuth2, JWT).
+
+    Logging frameworks → Different log appenders (Console, File, DB).
+
+
+------------------------------
+
+
+🔹 Problems Without Strategy
+
+    Tight coupling
+
+        The ShoppingCart knows about all payment types.
+
+        If we add a new payment method (e.g., Crypto), we must edit the checkout() method.
+
+        This violates the Open/Closed Principle (class should be open for extension, closed for modification).
+
+    Code duplication & messy if-else
+
+        If different places in code need payment logic, we’d duplicate the same if-else.
+
+    Hard to test
+
+        You can’t easily test each payment logic independently, since it’s all inside one method.
+
+    Not flexible at runtime
+
+        Switching strategies dynamically is difficult (need to change strings or flags instead of objects).
+
+🔹 With Strategy Pattern (Better Way)
+
+    Each payment method is in its own class (Single Responsibility Principle).
+
+    Adding a new payment method means just creating a new Strategy class — no need to touch ShoppingCart.
+
+    Easy to test each payment strategy independently.
+
+    Runtime flexibility (can swap strategies anytime).
